@@ -25,3 +25,34 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+
+:root {
+  --gap: 1.5em;
+  --duration: 30s;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(calc(-150% - var(--gap)));
+  }
+}
+
+.marquee {
+  display: flex;
+  user-select: none;
+  gap: var(--gap);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap);
+  will-change: transform;
+  animation: scroll var(--duration) linear infinite;
+}
