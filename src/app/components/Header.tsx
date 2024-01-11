@@ -23,7 +23,7 @@ const Header: NextComponentType<NextPageContext, {}, HeaderProps> = ({
     return () => clearInterval(interval);
   }, []);
   return (
-    <header className="flex flex-col w-full gap-5 overflow-hidden">
+    <header className="flex flex-col w-full gap-5 ">
       <Marquee>
         {priceData.map((point) => (
           <li key={point.name}>
@@ -48,9 +48,11 @@ export default Header;
 
 function Marquee({ children }: { children: React.ReactNode }) {
   return (
-    <div className="marquee">
-      <ul className="marquee__content">{children}</ul>
-      <ul className="marquee__content">{children}</ul>
+    <div className="w-full overflow-hidden">
+      <div className="marquee">
+        <ul className="marquee__content">{children}</ul>
+        <ul className="marquee__content">{children}</ul>
+      </div>
     </div>
   );
 }

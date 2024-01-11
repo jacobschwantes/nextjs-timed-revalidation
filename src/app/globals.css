@@ -29,15 +29,15 @@ body {
 
 
 :root {
-  --gap: 1.5em;
-  --duration: 30s;
+  --gap: 2em;
+  --duration: 15s;
 }
 @keyframes scroll {
   from {
-    transform: translateX(-50%);
+    transform: translateX(-25%);
   }
   to {
-    transform: translateX(calc(-150% - var(--gap)));
+    transform: translateX(calc(-125% - var(--gap)));
   }
 }
 
