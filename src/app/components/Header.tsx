@@ -23,7 +23,7 @@ const Header: NextComponentType<NextPageContext, {}, HeaderProps> = ({
     return () => clearInterval(interval);
   }, []);
   return (
-    <header className="flex flex-col w-full gap-5">
+    <header className="flex flex-col w-full gap-5 overflow-hidden">
       <Marquee>
         {priceData.map((point) => (
           <li key={point.name}>
